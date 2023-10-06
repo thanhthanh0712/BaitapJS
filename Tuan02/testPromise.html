@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var fn = function(rs, rj) {
+            if (1 == 1)
+                rs("aaaaa");
+            else
+                rj();
+        }
+
+        var promise = new Promise(fn);
+
+        promise
+            .then((data) => {
+                console.log(data);
+            })
+            .catch(() => {
+                console.log("error!");
+            })
+    </script>
+</body>
+
+</html>
